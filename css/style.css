@@ -179,6 +179,7 @@ img {
 .preco {
     background: #f7f7f7;
     padding: 60px 10px;
+
     display: flex;
     flex-wrap: wrap;
     align-items: flex-end;
@@ -192,6 +193,7 @@ img {
 
 .preco-item {
     flex: 1 1 260px;
+    
     border: 4px solid white;
     padding: 20px;
     margin: 10px;
@@ -279,4 +281,51 @@ img {
 
 .preco-item button:hover {
     color: #122ab2;
+}
+
+/* Qualidade */
+.qualidade {
+    max-width: 960px;
+    margin: 60px auto;
+    
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.qualidade-item {
+    flex: 1 1 300px;
+    /* flex: 1 1 calc(33.333% - 20px); */ /* Exemplo utilizando calc - porém no IE 11 calc não funciona no flex-basis */
+    margin: 20px 10px;
+}
+
+.qualidade-item h2 {
+    font-size: 2.25em;
+    color: #a4a4a4;
+    margin-bottom: 20px;
+}
+
+.qualidade-item h2::before {
+    content: '';
+    display: inline-block;
+    width: 8px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.qualidade-item:nth-of-type(3n+1) h2::before {
+    background: #ae81ff;
+}
+
+.qualidade-item:nth-of-type(3n+2) h2::before {
+    background: #f9265e;
+}
+
+.qualidade-item:nth-of-type(3n+3) h2::before {
+    background: #66d93b;
+}
+
+.qualidade-item p {
+    font-size: 1.35em;
+    line-height: 1.4;
+    color: #777;
 }
